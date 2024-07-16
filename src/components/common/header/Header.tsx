@@ -1,20 +1,31 @@
-import styles from './Header.module.scss';
+import { useNavigate } from 'react-router-dom'
+import styles from './Header.module.scss'
 
-const Header = () => {
-  return (
-    <header className={styles.header}>
-        <div className={styles.header__logoBox}>
-            <img className={styles.header__logoBox__logo} src="src/assets/images/image-logo.png" alt=""/>
-            <span className={styles.header__logoBox__title}>PhotoSplash</span>
-        </div>
+function Header() {
+    const navigate = useNavigate()
 
-        <div className={styles.header__profileBox}>
-            <button className={styles.header__profileBox__button}>Submit Photo</button>
-            <button className={styles.header__profileBox__button}>Bookmark</button>
-            <span className={styles.header__profileBox__userName}>Therosie | Therosie@gmail.com</span>
-        </div>
-    </header>
-  )
+    const moveToPage = (filter: string) => {
+        if (filter === 'main') {
+            navigate('/')
+        } else {
+            navigate('/bookmark')
+        }
+    }
+    return (
+        <header className={styles.header}>
+            <div className={styles.header__logoBox} onClick={() => moveToPage('main')}>
+                <img src="/assets/images/image-logo.png" alt="" className={styles.header__logoBox__logo} />
+                <span className={styles.header__logoBox__title}>PhotoSplash</span>
+            </div>
+            <div className={styles.header__profileBox}>
+                <button className={styles.header__profileBox__button}>Submit Photos</button>
+                <button className={styles.header__profileBox__button} onClick={() => moveToPage('bookmark')}>
+                    북마크
+                </button>
+                <span className={styles.header__profileBox__userName}>Therosie | Therosie@gmail.com</span>
+            </div>
+        </header>
+    )
 }
 
 export default Header

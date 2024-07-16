@@ -9,6 +9,7 @@ import { CardDTO } from './types/card';
 import { useRecoilValueLoadable } from 'recoil';
 import { imageData } from '@/store/selectors/imageSelectors';
 import DetailDialog from '@/components/common/dialog/DetailDialog';
+import Loading from './components/Loading';
 
 
 const Main = () => {
@@ -19,14 +20,14 @@ const Main = () => {
 
   const CARD_LIST = useMemo(() => {
     // imgSelector.state = hasValue or loading
-      console.log(imgSelector)
       if (imgSelector !== null && imgSelector.state === 'hasValue') {
+        console.log(imgSelector)
           const result = imgSelector.contents.data.map((card: CardDTO) => {
               return <Card data={card} key={card.id} handleDialog={setOpen} handleSetData={setImgData} />
           })
           return result
       } else {
-          return <>Lodaing..</>
+          return <Loading />
       }
     }, [imgSelector])
 
@@ -50,8 +51,8 @@ const Main = () => {
         <div className={styles.page__contents__imageBox}>{CARD_LIST}</div>
       </div>
       
-      {/* Footer */}
-      <Footer />
+      {/* Footer
+      <Footer /> */}
 
       { open && <DetailDialog data={imgData} handleDialog={setOpen} /> }
     </div>

@@ -1,14 +1,14 @@
 [
     {
         "index": 0,
-        "path": "/search/archival",
+        "path": "/archival",
         "label": "Archival",
         "searchValue": "archival",
         "isActive": false
     },
     {
         "index": 1,
-        "path": "/t/wallpapers",
+        "path": "/wallpapers",
         "label": "Wallpapers",
         "searchValue": "wallpapers",
         "isActive": false
@@ -22,56 +22,56 @@
     },
     {
         "index": 3,
-        "path": "/search/3d-renders",
+        "path": "/3d-renders",
         "label": "3D Renders",
         "searchValue": "3d-renders",
         "isActive": false
     },
     {
         "index": 4,
-        "path": "/t/travel",
+        "path": "/travel",
         "label": "travel",
         "searchValue": "travel",
         "isActive": false
     },
     {
         "index": 5,
-        "path": "/t/textures-patterns",
+        "path": "/textures-patterns",
         "label": "Textures & Patterns",
         "searchValue": "textures-patterns",
         "isActive": false
     },
     {
         "index": 6,
-        "path": "/t/street-photography",
+        "path": "/street-photography",
         "label": "Street Photography",
         "searchValue": "street-photography",
         "isActive": false
     },
     {
         "index": 7,
-        "path": "/t/film",
+        "path": "/film",
         "label": "film",
         "searchValue": "film",
         "isActive": false
     },
     {
         "index": 8,
-        "path": "/t/experimental",
+        "path": "/experimental",
         "label": "experimental",
         "searchValue": "experimental",
         "isActive": false
     },
     {
         "index": 9,
-        "path": "/t/nature",
+        "path": "/nature",
         "label": "Nature",
         "searchValue": "nature",
         "isActive": false
     },
     {
         "index": 10,
-        "path": "/t/architecture-interior",
+        "path": "/architecture-interior",
         "label": "Architecture & Interiors",
         "searchValue": "architecture-interior",
         "isActive": false
