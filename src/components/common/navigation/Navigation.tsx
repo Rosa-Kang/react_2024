@@ -1,32 +1,47 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
+import { Link, useLocation } from 'react-router-dom'
 import styles from './Navigation.module.scss'
-import { Link } from 'react-router-dom';
-import navJson from './nav.json';
+import navJson from './nav.json'
+import { useRecoilState } from 'recoil'
+import { pageState } from '@/store/atoms/pageState'
+import { searchState } from '@/store/atoms/searchState'
+
 
 interface Navigation {
-    index: number,
-    path: string,
-    label: string,
-    searchValue: string,
+    index: number
+    path: string
+    label: string
+    searchValue: string
     isActive: boolean
 }
 
-function Navigation() {
+function CommonNav() {
+    const location = useLocation()
     const [navigation, setNavigation] = useState<Navigation[]>(navJson)
+    const [, setPage] = useRecoilState(pageState)
+    const [, setSearch] = useRecoilState(searchState)
+
+    useEffect(() => {
+        navigation.forEach((nav: Navigation) => {
+            nav.isActive = false
+
+            if (nav.path === location.pathname || location.pathname.includes(nav.path)) {
+                nav.isActive = true
+                setSearch(nav.searchValue)
+                setPage(1)
+            }
+        })
+        setNavigation([...navigation])
+    }, [location.pathname])
 
     const navLinks = navigation.map((item: Navigation) => {
         return (
-            <Link to={item.path} className={styles.navigation__menu} key={item.path}>
+            <Link to={item.path} className={item.isActive ? `${styles.navigation__menu} ${styles.active}` : `${styles.navigation__menu} ${styles.inactive}`} key={item.path}>
                 <span className={styles.navigation__menu__label}>{item.label}</span>
             </Link>
         )
     })
-
-  return (
-    <div className={styles.navigation}>
-        {navLinks}
-    </div>
-  )
+    return <nav className={styles.navigation}>{navLinks}</nav>
 }
 
-export default Navigation 
+export default CommonNav

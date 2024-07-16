@@ -1,13 +1,21 @@
+import { CardDTO } from '../types/card';
 import styles from './Card.module.scss';
 
-function Card() {
+interface Props {
+  data : CardDTO
+  handleDialog: (eventValue : boolean)=> void
+  handleSetData: (eventValue: CardDTO) => void
+}
+
+function Card({ data, handleDialog, handleSetData } : Props) {
   const openDialog=()=> {
-      console.log('Card Function')
+    handleDialog(true)
+    handleSetData(data)
   }
 
   return (
     <div className={styles.card} onClick={openDialog}>
-      <img src="" alt="" className={styles.card__image}/>
+      <img src={data.urls.small} alt={data.alt_description} className={styles.card__image}/>
     </div>
   )
 }

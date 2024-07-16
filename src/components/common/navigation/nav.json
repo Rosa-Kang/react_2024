@@ -1,86 +1,79 @@
 [
     {
         "index": 0,
-        "path": "/search/edit",
-        "label": "edit",
-        "searchValue": "edit",
+        "path": "/search/archival",
+        "label": "Archival",
+        "searchValue": "archival",
         "isActive": false
     },
     {
         "index": 1,
-        "path": "/search/following",
-        "label": "following",
-        "searchValue": "following",
+        "path": "/t/wallpapers",
+        "label": "Wallpapers",
+        "searchValue": "wallpapers",
         "isActive": false
     },
     {
         "index": 2,
-        "path": "/search/photoPlus",
-        "label": "Unsplash Photo+",
-        "searchValue": "photo",
+        "path": "/illustrations",
+        "label": "Illustrations",
+        "searchValue": "illustrations",
         "isActive": false
     },
     {
         "index": 3,
-        "path": "/search/oneColor",
-        "label": "solid-color",
-        "searchValue": "one color",
+        "path": "/search/3d-renders",
+        "label": "3D Renders",
+        "searchValue": "3d-renders",
         "isActive": false
     },
     {
         "index": 4,
-        "path": "/search/3dRender",
-        "label": "3D rendering",
-        "searchValue": "3d rendering",
-        "isActive": false
-    },
-    {
-        "index": 5,
-        "path": "/search/nature",
-        "label": "nature",
-        "searchValue": "nature",
-        "isActive": false
-    },
-    {
-        "index": 6,
-        "path": "/search/texture",
-        "label": "texture",
-        "searchValue": "texture",
-        "isActive": false
-    },
-    {
-        "index": 7,
-        "path": "/search/interior",
-        "label": "interior",
-        "searchValue": "interior",
-        "isActive": false
-    },
-    {
-        "index": 8,
-        "path": "/search/film",
-        "label": "film",
-        "searchValue": "film",
-        "isActive": false
-    },
-    {
-        "index": 9,
-        "path": "/search/experimental",
-        "label": "experimental",
-        "searchValue": "experimental",
-        "isActive": false
-    },
-    {
-        "index": 10,
-        "path": "/search/travel",
+        "path": "/t/travel",
         "label": "travel",
         "searchValue": "travel",
         "isActive": false
     },
     {
-        "index": 11,
-        "path": "/search/sports",
-        "label": "sports",
-        "searchValue": "sports",
+        "index": 5,
+        "path": "/t/textures-patterns",
+        "label": "Textures & Patterns",
+        "searchValue": "textures-patterns",
+        "isActive": false
+    },
+    {
+        "index": 6,
+        "path": "/t/street-photography",
+        "label": "Street Photography",
+        "searchValue": "street-photography",
+        "isActive": false
+    },
+    {
+        "index": 7,
+        "path": "/t/film",
+        "label": "film",
+        "searchValue": "film",
+        "isActive": false
+    },
+    {
+        "index": 8,
+        "path": "/t/experimental",
+        "label": "experimental",
+        "searchValue": "experimental",
+        "isActive": false
+    },
+    {
+        "index": 9,
+        "path": "/t/nature",
+        "label": "Nature",
+        "searchValue": "nature",
+        "isActive": false
+    },
+    {
+        "index": 10,
+        "path": "/t/architecture-interior",
+        "label": "Architecture & Interiors",
+        "searchValue": "architecture-interior",
         "isActive": false
     }
 ]

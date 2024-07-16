@@ -4,7 +4,8 @@
     justify-content: space-between;
 
     width: 100%;
-    height: $HEADER-HEIGHT;
+    height: 56px;
+
     padding: 0 16px;
 
     &__logoBox {
@@ -16,6 +17,8 @@
 
         gap: 8px;
 
+        cursor: pointer;
+
         &__logo {
             height: 75%;
         }
@@ -24,8 +27,7 @@
             font-weight: 600;
         }
     }
-
-    &__profileBox{
+    &__profileBox {
         display: flex;
         align-items: center;
         justify-content: center;
@@ -48,7 +50,6 @@
             color: $color-white-600;
             background-color: $color-white-000;
         }
-
         &__userName {
             color: $color-white-600;
             font-weight: 400;
