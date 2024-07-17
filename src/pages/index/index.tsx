@@ -22,7 +22,7 @@ const Main = () => {
     // imgSelector.state = hasValue or loading
       if (imgSelector !== null && imgSelector.state === 'hasValue') {
         console.log(imgSelector)
-          const result = imgSelector.contents.data.map((card: CardDTO) => {
+          const result = imgSelector.contents.results.map((card: CardDTO) => {
               return <Card data={card} key={card.id} handleDialog={setOpen} handleSetData={setImgData} />
           })
           return result
@@ -38,7 +38,7 @@ const Main = () => {
       <Header />
       {/* Navigation */}
       <Navigation />
-      <div className={styles.page__contnets}>
+      <div className={styles.page__contents}>
         <div className={styles.page__contents__introBox}>
           <div className={styles.wrapper}>
             <span className={styles.wrapper__title}></span>
@@ -49,10 +49,9 @@ const Main = () => {
         </div>
        {/* Card List */}
         <div className={styles.page__contents__imageBox}>{CARD_LIST}</div>
+          {/* Footer*/}
+          <Footer /> 
       </div>
-      
-      {/* Footer
-      <Footer /> */}
 
       { open && <DetailDialog data={imgData} handleDialog={setOpen} /> }
     </div>

@@ -17,7 +17,7 @@ function CommonFooter() {
 
     // Page List UI
     const newArr: number[] = new Array()
-    for (let i = 1; i <= imgSelector.contents.headers; i++) {
+    for (let i = 1; i <= imgSelector.contents.total_pages; i++) {
         newArr.push(i)
     }
     const length = newArr.length

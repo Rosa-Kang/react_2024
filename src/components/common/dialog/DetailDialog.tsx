@@ -29,18 +29,18 @@ function DetailDialog({ data, handleDialog }: Props) {
         // 1. 로컬스토리지에 bookmark이라는 데이터가 없을 경우
         if (!getLocalStorage || getLocalStorage === null) {
             localStorage.setItem('bookmark', JSON.stringify([selected]))
-            toast('해당 이미지를 북마크에 저장하였습니다. 😄')
+            toast('The image has been bookmarked. 😄')
         } else {
             // 2. 해당 이미지가 이미 로컬스토리지 bookmark라는 데이터에 저장되어 있을 경우
             if (getLocalStorage.findIndex((item: CardDTO) => item.id === selected.id) > -1) {
-                toast('해당 이미지는 이미 북마크에 추가된 상태입니다. ❌')
+                toast('The image is already bookmarked ❌')
             } else {
                 // 3. 해당 이미지가 로컬스토리지 bookmark라는 데이터에 저장되어 있지 않을 경우 + bookmark라는 데이터에 이미 어떤 값이 담겨 있는 경우
                 const res = [...getLocalStorage]
                 res.push(selected)
                 localStorage.setItem('bookmark', JSON.stringify(res))
 
-                toast('해당 이미지를 북마크에 저장하였습니다. 😄')
+                toast('The image has been bookmarked. 😄')
             }
         }
     }
@@ -54,7 +54,6 @@ function DetailDialog({ data, handleDialog }: Props) {
 
         // ESC Key 입력시, 다이얼로그 닫기
         const escKeyDownCloseDialog = (event: any) => {
-            console.log('함수호출')
             if (event.key === 'Escape') {
                 closeDialog(event)
             }

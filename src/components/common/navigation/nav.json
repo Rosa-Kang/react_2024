@@ -30,7 +30,7 @@
     {
         "index": 4,
         "path": "/travel",
-        "label": "travel",
+        "label": "Travel",
         "searchValue": "travel",
         "isActive": false
     },
@@ -51,14 +51,14 @@
     {
         "index": 7,
         "path": "/film",
-        "label": "film",
+        "label": "Film",
         "searchValue": "film",
         "isActive": false
     },
     {
         "index": 8,
         "path": "/experimental",
-        "label": "experimental",
+        "label": "Experimental",
         "searchValue": "experimental",
         "isActive": false
     },

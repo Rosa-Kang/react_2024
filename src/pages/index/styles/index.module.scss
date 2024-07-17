@@ -14,7 +14,7 @@
         justify-content: flex-start;
 
         width: 100%;
-        height: calc(100% - $HEADER-HEIGHT - $NAVIGATION-HEIGHT - $FOOTER-HEIGHT);
+        height: 100%;
 
         &__introBox {
             display: flex;

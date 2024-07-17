@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import styles from './SearchBar.module.scss';
 import { useRecoilState } from 'recoil';
 import { searchState } from '@/store/atoms/searchState';
@@ -6,7 +6,7 @@ import { pageState } from '@/store/atoms/pageState';
 
 
 function SearchBar() {
-  const [, setSearch] = useRecoilState(searchState);
+  const [search, setSearch] = useRecoilState(searchState);
   const [, setPage] = useRecoilState(pageState);
   const [text, setText] = useState('');
 
@@ -15,24 +15,24 @@ function SearchBar() {
   }
 
   const onSearch = () => {
-      if (text === '') {
-            setSearch('Korea')
-        } else {
-            setSearch(text)
-        }
-  }
+    if (text === '') {
+      setSearch('Korea');
+    } else {
+      setSearch(text);
+    }
+    setPage(1); // 페이지를 1로 초기화
+  };
 
   const handleKeyDown =(event: React.KeyboardEvent) => {
       if(event.key === "Enter") {
-          if(text === "") {
-            setSearch('Korea')
-            setPage(1)
-          } else {
-            setSearch(text)
-            setPage(1)
-          }
+          onSearch();
       }
   }
+
+  useEffect(() => {
+    if(search == 'Korea') setText('')
+    else setText(text);
+  }, [search]);
 
   return (
     <div className={styles.searchBar}>
