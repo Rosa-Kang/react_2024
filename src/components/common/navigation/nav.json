@@ -68,12 +68,5 @@
         "label": "Nature",
         "searchValue": "nature",
         "isActive": false
-    },
-    {
-        "index": 10,
-        "path": "/architecture-interior",
-        "label": "Architecture & Interiors",
-        "searchValue": "architecture-interior",
-        "isActive": false
     }
 ]
