@@ -55,7 +55,7 @@ function DetailDialog({ data, handleDialog }: Props) {
         // close Dialog when ESC Key is pressed
         const escKeyDownCloseDialog = (event: any) => {
             if (event.key === 'Escape') {
-                closeDialog(event)
+                closeDialog()
             }
         }
 
