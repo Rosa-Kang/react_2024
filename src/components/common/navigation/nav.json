@@ -1,77 +1,77 @@
 [
     {
         "index": 0,
-        "path": "/archival",
+        "path": "/search/archival",
         "label": "Archival",
         "searchValue": "archival",
         "isActive": false
     },
     {
         "index": 1,
-        "path": "/wallpapers",
+        "path": "/search/wallpapers",
         "label": "Wallpapers",
         "searchValue": "wallpapers",
         "isActive": false
     },
     {
         "index": 2,
-        "path": "/illustrations",
+        "path": "/search/illustrations",
         "label": "Illustrations",
         "searchValue": "illustrations",
         "isActive": false
     },
     {
         "index": 3,
-        "path": "/3d-renders",
+        "path": "/search/3d-renders",
         "label": "3D Renders",
         "searchValue": "3d-renders",
         "isActive": false
     },
     {
         "index": 4,
-        "path": "/travel",
+        "path": "/search/travel",
         "label": "Travel",
         "searchValue": "travel",
         "isActive": false
     },
     {
         "index": 5,
-        "path": "/textures-patterns",
+        "path": "/search/textures-patterns",
         "label": "Textures & Patterns",
         "searchValue": "textures-patterns",
         "isActive": false
     },
     {
         "index": 6,
-        "path": "/street-photography",
+        "path": "/search/street-photography",
         "label": "Street Photography",
         "searchValue": "street-photography",
         "isActive": false
     },
     {
         "index": 7,
-        "path": "/film",
+        "path": "/search/film",
         "label": "Film",
         "searchValue": "film",
         "isActive": false
     },
     {
         "index": 8,
-        "path": "/experimental",
+        "path": "/search/experimental",
         "label": "Experimental",
         "searchValue": "experimental",
         "isActive": false
     },
     {
         "index": 9,
-        "path": "/nature",
+        "path": "/search/nature",
         "label": "Nature",
         "searchValue": "nature",
         "isActive": false
     },
     {
         "index": 10,
-        "path": "/architecture-interior",
+        "path": "/search/architecture-interior",
         "label": "Architecture & Interiors",
         "searchValue": "architecture-interior",
         "isActive": false

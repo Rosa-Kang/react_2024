@@ -3,9 +3,11 @@ import styles from './SearchBar.module.scss';
 import { useRecoilState } from 'recoil';
 import { searchState } from '@/store/atoms/searchState';
 import { pageState } from '@/store/atoms/pageState';
+import { useNavigate } from 'react-router-dom';
 
 
 function SearchBar() {
+  const navigate = useNavigate()
   const [search, setSearch] = useRecoilState(searchState);
   const [, setPage] = useRecoilState(pageState);
   const [text, setText] = useState('');
@@ -19,6 +21,7 @@ function SearchBar() {
       setSearch('Korea');
     } else {
       setSearch(text);
+      navigate('/')
     }
     setPage(1); // 페이지를 1로 초기화
   };
@@ -30,8 +33,7 @@ function SearchBar() {
   }
 
   useEffect(() => {
-    if(search == 'Korea') setText('')
-    else setText(text);
+    if(search  !== 'Korea' && search !== text) setText('')
   }, [search]);
 
   return (

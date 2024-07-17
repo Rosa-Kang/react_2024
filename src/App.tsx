@@ -1,5 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom"
-import MainPage from "@pages/index/index"
+import MainPage from "@/pages/index/index"
+import BookmarkPage from '@/pages/bookmark/index'
 import { RecoilRoot } from "recoil"
 
 
@@ -9,7 +10,8 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route index path="/" element={<MainPage />}></Route>
-          <Route index path="/:id" element={<MainPage />}></Route>
+          <Route index path="/search/:id" element={<MainPage />}></Route>
+          <Route index path="/bookmark" element={<BookmarkPage />}></Route>
         </Routes>
       </BrowserRouter>
     </RecoilRoot>

@@ -24,6 +24,7 @@
 
         width: 50%;
         height: 700px;
+        position: relative;
 
         background-color: $color-white-000;
         border-radius: 12px;
@@ -101,9 +102,10 @@
             width: 100%;
             height: calc(100% - 220px);
 
-            .image {
-                height: 100%;
+            img {
+                height: 90%;
                 object-fit: cover;
+                width: fit-content;
             }
         }
         &__footer {
