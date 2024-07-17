@@ -1,4 +1,4 @@
-import { CardDTO, Tag } from '@/pages/index/types/card';
+import { CardDTO } from '@/pages/index/types/card';
 import styles from './DetailDialog.module.scss';
 import toast, { toastConfig } from 'react-simple-toasts';
 import 'react-simple-toasts/dist/theme/dark.css';
